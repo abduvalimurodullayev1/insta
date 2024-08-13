@@ -32,7 +32,7 @@ InstaClone is a web application inspired by Instagram, built using Django and Dj
 
 3. **Install the dependencies**:
     ```bash
-    pip install -r requirements.txt
+    pip install django
     ```
 
 4. **Apply the migrations**:
