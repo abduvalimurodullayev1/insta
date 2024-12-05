@@ -56,27 +56,6 @@ def NewPost(request):
     return render(request, 'newpost.html', context)
 
 
-# def Post_details(request, post_id):
-#     post = get_object_or_404(Post, id=post_id)
-#     comments = Comment.objects.filter(post=post).order_by('-date')
-#
-#     if request.method == "POST":
-#         form = CommentForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             comment = form.save(commit=False)
-#             comment.user = request.user
-#             comment.save()
-#             return HttpResponseRedirect(reverse('post-details',args=[post_id]))
-#     else:
-#         form = CommentForm()
-#     context = {
-#         'form': form,
-#         'comment': comments,
-#         'post':post
-#
-#     }
-#     return render(request, 'postdetail.html', context)
-
 def Post_details(request, post_id):
     user = request.user
     post = get_object_or_404(Post, id=post_id)
