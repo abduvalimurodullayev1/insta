@@ -9,7 +9,7 @@ from comment.models import Comment
 from post.forms import NewPostform
 from post.models import Stream, Post, Tag, Likes
 from userauths.models import Profile
-# 
+
 @login_required
 def index(request):
     user = request.user
